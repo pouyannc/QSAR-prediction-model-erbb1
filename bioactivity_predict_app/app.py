@@ -52,7 +52,7 @@ ErbB1 is a drug target for various tumours.
 with st.sidebar.header('Upload your CSV data'):
     upload_file = st.sidebar.file_uploader("Upload you input file", type=['txt'])
     st.sidebar.markdown("""
-[Example input file](download link for example txt goes here)
+[Example input file](https://raw.githubusercontent.com/pouyannc/QSAR-prediction-model-erbb1/main/bioactivity_predict_app/example_EGFR_inhibitors.txt)
 """)
 
 if st.sidebar.button('Predict'):
@@ -72,7 +72,7 @@ if st.sidebar.button('Predict'):
     st.write(desc.shape)
 
     #Read descriptor list used in previously build model
-    st.header('**Subset of descriptors from previously build models**')
+    st.header('**Subset of descriptors from previously built models**')
     Xlist=list(pd.read_csv('descriptor_list_EGFR_model.csv').columns)
     desc_subset=desc[Xlist]
     st.write(desc_subset)
